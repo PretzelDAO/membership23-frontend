@@ -36,7 +36,7 @@ function Plan({ name, description, price, features, href, featured = false }) {
         >
           {description}
         </p>
-        <p className="order-first flex font-display font-bold">
+        <p className="order-first flex font-sans font-bold">
           <span
             className={clsx(
               'text-[1.75rem] leading-tight',
@@ -101,7 +101,7 @@ export function Pricing() {
         <SectionHeading number="4" id="pricing-title">
           Pricing
         </SectionHeading>
-        <p className="mt-8 font-display text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
+        <p className="mt-8 font-sans text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
           Pick your package
         </p>
         <p className="mt-4 max-w-xl text-lg tracking-tight text-slate-600">

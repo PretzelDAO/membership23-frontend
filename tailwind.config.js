@@ -32,8 +32,7 @@ module.exports = {
         '6xl': '5rem',
       },
       fontFamily: {
-        sans: 'var(--font-inter)',
-        display: ['Cabinet Grotesk', ...defaultTheme.fontFamily.sans],
+        sans: 'var(--font-opensans)',
       },
     },
   },

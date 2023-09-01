@@ -43,7 +43,7 @@ export function TableOfContents() {
         <SectionHeading number="1" id="table-of-contents-title">
           Table of contents
         </SectionHeading>
-        <p className="mt-8 font-display text-4xl font-bold tracking-tight text-slate-900">
+        <p className="mt-8 font-sans text-4xl font-bold tracking-tight text-slate-900">
           Get a look at all of the content covered in the book. Everything you
           need to know is inside.
         </p>
@@ -57,7 +57,7 @@ export function TableOfContents() {
             <ExpandableItems>
               {Object.entries(tableOfContents).map(([title, pages]) => (
                 <li key={title}>
-                  <h3 className="font-display text-3xl font-bold tracking-tight text-slate-900">
+                  <h3 className="font-sans text-3xl font-bold tracking-tight text-slate-900">
                     {title}
                   </h3>
                   <ol

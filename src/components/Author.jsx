@@ -37,7 +37,7 @@ export function Author() {
             <SectionHeading number="5" id="author-title">
               Author
             </SectionHeading>
-            <p className="mt-8 font-display text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
+            <p className="mt-8 font-sans text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
               <span className="block text-blue-600">Mira Lindehoff –</span> Hey
               there, I’m the author behind ‘Everything Starts as a Square’.
             </p>
