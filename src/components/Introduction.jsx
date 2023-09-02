@@ -52,7 +52,7 @@ export function Introduction() {
 
         <ol role="list" className="mt-16 space-y-10 sm:space-y-16">
           <li>
-            <h2 className="font-sans text-3xl font-bold tracking-tight text-slate-900">
+            <h2 className="font-sans text-4xl font-bold tracking-tight text-slate-900">
               FAQ
             </h2>
             <ol role="list" className="mt-8 divide-y divide-slate-300/30 rounded-2xl bg-slate-50 px-6 py-3 text-base tracking-tight sm:px-8 sm:py-7">
