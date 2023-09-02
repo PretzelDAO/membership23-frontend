@@ -15,7 +15,7 @@ export function Introduction() {
           Details about PretzelDAO e.V. Membership
         </h2>
         <p className="mt-4">
-          To become an official Member of the PretzelDAO e.V., you first need to be invited to our Community Discord by an existing member. Once inside our Discord Server, you can submit your introduction and wait for the PretzelDAO e.V. Members to upvote. Once upvoted and approved, you can access further channels on our Server and fill out the Application Form for the PretzelDAO e.V. Membership. After your form is approved, your wallet address is added to our mint contract. You can become an official PretzelDAO e.V. member by minting your Membership Card and paying the yearly membership fee during this process.
+          To become an official Member of the PretzelDAO e.V., you first need to be invited to our Community Discord by an existing member. Once inside our Discord Server, you can submit your introduction and wait for the PretzelDAO e.V. Members to upvote. Once upvoted and approved, you can access further channels on our Server and fill out the Application Form for the PretzelDAO e.V. Membership. After your form is approved, your wallet address is added to our mint contract. You can become an official PretzelDAO e.V. Member by minting your Membership Card and paying the yearly membership fee during this process.
         </p>
         <p className="mt-4">
           <strong>Membership fee for the year 2023:</strong> 50 USDC
