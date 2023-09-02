@@ -45,7 +45,7 @@ export function Introduction() {
             href="https://www.pretzeldao.com/"
             className="text-base font-medium text-blue-500 hover:text-blue-600"
           >
-            Read our full Club Statute (Vereinssatzung) here{' '}
+            Read our full Club Statute (Vereinssatzung) here (TODO: add link){' '}
             <span aria-hidden="true">⧉</span>
           </Link>
         </p>
