@@ -10,9 +10,9 @@ const openSans = Open_Sans({
 })
 
 export const metadata = {
-  title: 'Everything Starts as a Square - Get lost in the world of icon design',
+  title: 'PretzelDAO - Membership Card Mint',
   description:
-    'A book and video course that teaches you how to design your own icons from scratch.',
+    'Frontend interface to mint your PretzelDAO e.V. Membership Card NFT',
 }
 
 export default function RootLayout({ children }) {
