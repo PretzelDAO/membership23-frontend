@@ -1,7 +1,9 @@
 import { Open_Sans } from 'next/font/google'
 import clsx from 'clsx'
+import "@rainbow-me/rainbowkit/styles.css";
 
 import '@/styles/tailwind.css'
+import Wagmi from './config/wagmiConfig'
 
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -15,7 +17,7 @@ export const metadata = {
     'Frontend interface to mint your PretzelDAO e.V. Membership Card NFT',
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children } : { children: React.ReactNode }) {
   return (
     <html
       lang="en"
@@ -26,7 +28,14 @@ export default function RootLayout({ children }) {
     >
       <head>
       </head>
-      <body className="flex min-h-full flex-col">{children}</body>
+      
+        <body className="flex min-h-full flex-col">
+        <Wagmi>
+          {children}
+        </Wagmi>
+        </body>
+      
+      
     </html>
   )
 }
