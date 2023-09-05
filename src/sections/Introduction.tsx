@@ -18,7 +18,7 @@ export function Introduction() {
           To become an official Member of the PretzelDAO e.V., you first need to be invited to our Community Discord by an existing member. Once inside our Discord Server, you can submit your introduction and wait for the PretzelDAO e.V. Members to upvote. Once upvoted and approved, you can access further channels on our Server and fill out the Application Form for the PretzelDAO e.V. Membership. After your form is approved, your wallet address is added to our mint contract. You can become an official PretzelDAO e.V. Member by minting your Membership Card and paying the yearly membership fee during this process.
         </p>
         <p className="mt-4">
-          <strong>Membership fee for the year 2023:</strong> 50 USDC
+          <strong>Membership fee for the year 2023:</strong> 50 USDC.
         </p>
         <p className="mt-4">
           Being official PretzelDAO e.V. Member means:
@@ -42,10 +42,10 @@ export function Introduction() {
         </p>
         <p className="mt-10">
           <Link
-            href="https://www.pretzeldao.com/"
+            href="https://docs.google.com/document/d/119jNYqEe1TPwL-PPsx7NflNviiQq-i3NBwvJE8PXBd8/edit?usp=sharing"
             className="text-base font-medium text-blue-500 hover:text-blue-600"
           >
-            Read our full Club Statute (Vereinssatzung) here (TODO: add link){' '}
+            Read our full Club Statute (Vereinssatzung) here{' '}
             <span aria-hidden="true">⧉</span>
           </Link>
         </p>
@@ -61,7 +61,7 @@ export function Introduction() {
                   Is my Membership Card NFT transferrable?
                 </p>
                 <p className="text-slate-500 text-base">
-                  No, your Membership Card NFT is soulbound and can't by transferred by you.
+                  No, your Membership Card NFT is soulbound and can't be sold or transferred by you.
                 </p>
               </li>
               <li className="py-3">
@@ -85,7 +85,7 @@ export function Introduction() {
                   What wallet can I mint with?
                 </p>
                 <p className="text-slate-500 text-base">
-                  Our minting contract is working with <a href="https://metamask.io/" className="underline">MetaMask Wallet</a>.
+                  Our minting contract is tested with the <a href="https://metamask.io/" className="underline">MetaMask Wallet</a> in the latest Chrome Browser on desktop.
                 </p>
               </li>
               <li className="py-3">

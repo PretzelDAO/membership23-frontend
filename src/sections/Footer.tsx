@@ -8,7 +8,7 @@ export function Footer() {
       </div>
       <div className="relative text-center text-sm text-slate-600">
         <p>Copyright &copy; {new Date().getFullYear()} PretzelDAO e.V.</p>
-        <p>Legal Notice (TODO: add link to Impressum on Notion)</p>
+        <p><a className="underline" href="https://pretzeldao.notion.site/Impressum-90d9a44cc1cd4873a4c64502a9a6bac0">Legal Notice</a></p>
       </div>
     </footer>
   )
