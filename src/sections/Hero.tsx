@@ -51,15 +51,12 @@ export function Hero() {
             <p className="mt-4 text-2xl text-slate-200">
               Connect your eligible wallet on Polygon network to mint your official PretzelDAO e.V. Memership Card NFT.
             </p>
-            <div className="mt-8 flex gap-4">
-              {/* <button type="button" id="mainButton" className="inline-flex justify-center rounded-md py-1 px-4 text-base font-semibold tracking-tight shadow-sm bg-gradient-to-r from-blue-500 to-emerald-300 hover:from-emerald-300 hover:to-emerald-300 transition ease-in-out delay-50 hover:scale-105 duration-100">
+
+            {/* <button type="button" id="mainButton" className="inline-flex justify-center rounded-md py-1 px-4 text-base font-semibold tracking-tight shadow-sm bg-gradient-to-r from-blue-500 to-emerald-300 hover:from-emerald-300 hover:to-emerald-300 transition ease-in-out delay-50 hover:scale-105 duration-100">
                 Connect Wallet
               </button> */}
-              <MintModule />
-              <a href="#introduction" className="inline-flex justify-center rounded-md border py-[calc(theme(spacing.1)-1px)] px-[calc(theme(spacing.4)-1px)] text-base font-semibold tracking-tight focus:outline-none border-slate-500 text-slate-400 hover:text-slate-800 hover:border-slate-500 hover:bg-slate-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600 active:border-slate-200 active:bg-slate-50 active:text-slate-900/70 disabled:opacity-40 disabled:hover:border-slate-200 disabled:hover:bg-transparent transition ease-in-out delay-50 hover:scale-105 duration-100">
-                Read more
-              </a>
-            </div>
+            <MintModule />
+
           </div>
         </div>
       </div>
