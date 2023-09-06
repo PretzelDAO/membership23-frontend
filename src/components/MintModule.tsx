@@ -257,7 +257,7 @@ export default function MintModule() {
             {isClient && !isConnected && <ConnectWallet />}
 
             {isClient && isBalanceOk && isConnected && !enoughAllowance && <button onClick={setAllowance} disabled={!allowanceWrite} className="inline-flex justify-center rounded-md py-1 px-4 text-base font-semibold tracking-tight shadow-sm bg-gradient-to-r from-blue-500 to-emerald-300 hover:from-emerald-300 hover:to-emerald-300 transition ease-in-out delay-50 hover:scale-105 duration-100">
-                Set allowance of 50 USDC
+                Set allowance of 20 USDC
             </button>}
 
             {isClient && isBalanceOk && isConnected && enoughAllowance && <button onClick={mint} disabled={!mintWrite} className="inline-flex justify-center rounded-md py-1 px-4 text-base font-semibold tracking-tight shadow-sm bg-gradient-to-r from-blue-500 to-emerald-300 hover:from-emerald-300 hover:to-emerald-300 transition ease-in-out delay-50 hover:scale-105 duration-100">
@@ -267,7 +267,7 @@ export default function MintModule() {
                 Read more
             </a>
             </div>
-            {isClient && isConnected && !enoughAllowance && isBalanceOk && <p className="mt-4 text-base text-slate-200">You need to set an allowance of 50 USDC (type in "50" or hit "use default" in the MetaMask modal) for minting contract of the Membership Card NFT using the button above.</p>}
+            {isClient && isConnected && !enoughAllowance && isBalanceOk && <p className="mt-4 text-base text-slate-200">You need to set an allowance of 20 USDC (type in "20" or hit "use default" in the MetaMask modal) for minting contract of the Membership Card NFT using the button above.</p>}
             {isClient && isConnected && isBalanceOk && enoughAllowance && <><p className="mt-4 text-base text-green-400">You successfully added the required allowance!</p><p className="mt-4 text-base text-slate-200">When you click “mint”, 50 USDC will be transferred to the DAO treasury and you receive your PretzelDAO Membership Card NFT.</p></>}
             {isClient && isConnected && !isBalanceOk && !mintSuccess && <p className="mt-4 text-base text-slate-200">You already own a PretzelDAO e.V. Membership Card NFT, only 1 NFT per member is possible.</p>}
             {isClient && isConnected && !isBalanceOk && mintSuccess && <><p className="mt-4 text-base text-green-400">Success! Congrats on minting your PretzelDAO e.V. Membership Card NFT!</p></>}
@@ -276,10 +276,10 @@ export default function MintModule() {
             
 
             <NotificationPopup success={true} isActive={mintSuccessNotifyIsOpen} setActive={setMintSuccessNotifyIsOpen} title="Minting Successful" description="You have successfully minted your PretzelDAO Membership Card!" />
-            <NotificationPopup success={true} isActive={allowanceSuccessNotifyIsOpen} setActive={setAllowanceSuccessNotifyIsOpen} title="Allowance Successful" description="You have successfully given the mint contract an allowance of 50 USDC." />
+            <NotificationPopup success={true} isActive={allowanceSuccessNotifyIsOpen} setActive={setAllowanceSuccessNotifyIsOpen} title="Allowance Successful" description="You have successfully given the mint contract an allowance of 20 USDC." />
             <NotificationPopup success={false} isActive={errorNotifyIsOpen} setActive={setErrorNotifyIsOpen} title="Error" description="An error occured. Please try again." />
             <TransactionModal open={mintModalIsOpen} setOpen={setMintModalIsOpen} title="Minting Membership Card NFT" description="You are currently minting your PretzelDAO Membership Card…" txHash={mintData?.hash} />
-            <TransactionModal open={allowanceModalIsOpen} setOpen={setAllowanceModalIsOpen} title="Processing Allowance" description="Transcation for giving the mint contract an allowance of 50 USDC is processing…" txHash={allowanceData?.hash} />
+            <TransactionModal open={allowanceModalIsOpen} setOpen={setAllowanceModalIsOpen} title="Processing Allowance" description="Transcation for giving the mint contract an allowance of 20 USDC is processing…" txHash={allowanceData?.hash} />
 
         </>
 
