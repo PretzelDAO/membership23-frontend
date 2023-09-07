@@ -77,7 +77,9 @@ export default function MintModule() {
             functionName: 'allowlistWithId',
             args: [connectedWallet]
         })
-        return data > BigInt(0)
+        const isAllowlisted = data > BigInt(0)
+        setIsAllowlisted(isAllowlisted)
+        return isAllowlisted
     }
 
     async function checkBalance() {
@@ -256,23 +258,23 @@ export default function MintModule() {
             <div className="mt-8 flex gap-4">
             {isClient && !isConnected && <ConnectWallet />}
 
-            {isClient && isBalanceOk && isConnected && !enoughAllowance && <button onClick={setAllowance} disabled={!allowanceWrite} className="inline-flex justify-center rounded-md py-1 px-4 text-base font-semibold tracking-tight shadow-sm bg-gradient-to-r from-blue-500 to-emerald-300 hover:from-emerald-300 hover:to-emerald-300 transition ease-in-out delay-50 hover:scale-105 duration-100">
+            {isClient && isBalanceOk && isConnected && isAllowlisted && !enoughAllowance && <button onClick={setAllowance} disabled={!allowanceWrite} className="inline-flex justify-center rounded-md py-1 px-4 text-base font-semibold tracking-tight shadow-sm bg-gradient-to-r from-blue-500 to-emerald-300 hover:from-emerald-300 hover:to-emerald-300 transition ease-in-out delay-50 hover:scale-105 duration-100">
                 Set allowance of 20 USDC
             </button>}
 
-            {isClient && isBalanceOk && isConnected && enoughAllowance && <button onClick={mint} disabled={!mintWrite} className="inline-flex justify-center rounded-md py-1 px-4 text-base font-semibold tracking-tight shadow-sm bg-gradient-to-r from-blue-500 to-emerald-300 hover:from-emerald-300 hover:to-emerald-300 transition ease-in-out delay-50 hover:scale-105 duration-100">
+            {isClient && isBalanceOk && isConnected && isAllowlisted && enoughAllowance && <button onClick={mint} disabled={!mintWrite} className="inline-flex justify-center rounded-md py-1 px-4 text-base font-semibold tracking-tight shadow-sm bg-gradient-to-r from-blue-500 to-emerald-300 hover:from-emerald-300 hover:to-emerald-300 transition ease-in-out delay-50 hover:scale-105 duration-100">
                 Mint
             </button>}
             <a href="#introduction" className="inline-flex justify-center rounded-md border py-[calc(theme(spacing.1)-1px)] px-[calc(theme(spacing.4)-1px)] text-base font-semibold tracking-tight focus:outline-none border-slate-500 text-slate-400 hover:text-slate-800 hover:border-slate-500 hover:bg-slate-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600 active:border-slate-200 active:bg-slate-50 active:text-slate-900/70 disabled:opacity-40 disabled:hover:border-slate-200 disabled:hover:bg-transparent transition ease-in-out delay-50 hover:scale-105 duration-100">
                 Read more
             </a>
             </div>
-            {isClient && isConnected && !enoughAllowance && isBalanceOk && <p className="mt-4 text-base text-slate-200">You need to set an allowance of 20 USDC (type in "20" or hit "use default" in the MetaMask modal) for minting contract of the Membership Card NFT using the button above.</p>}
-            {isClient && isConnected && isBalanceOk && enoughAllowance && <><p className="mt-4 text-base text-green-400">You successfully added the required allowance!</p><p className="mt-4 text-base text-slate-200">When you click “mint”, 20 USDC will be transferred to the DAO treasury and you receive your PretzelDAO Membership Card NFT.</p></>}
+            {isClient && isConnected && isAllowlisted && !enoughAllowance && isBalanceOk && <p className="mt-4 text-base text-slate-200">You need to set an allowance of 20 USDC (type in "20" or hit "use default" in the MetaMask modal) for minting contract of the Membership Card NFT using the button above.</p>}
+            {isClient && isConnected && isAllowlisted && isBalanceOk && enoughAllowance && <><p className="mt-4 text-base text-green-400">You successfully added the required allowance!</p><p className="mt-4 text-base text-slate-200">When you click “mint”, 20 USDC will be transferred to the DAO treasury and you receive your PretzelDAO Membership Card NFT.</p></>}
             {isClient && isConnected && !isBalanceOk && !mintSuccess && <p className="mt-4 text-base text-slate-200">You already own a PretzelDAO e.V. Membership Card NFT, only 1 NFT per member is possible.</p>}
             {isClient && isConnected && !isBalanceOk && mintSuccess && <><p className="mt-4 text-base text-green-400">Success! Congrats on minting your PretzelDAO e.V. Membership Card NFT!</p></>}
             {isClient && isConnected && !isBalanceOk && mintSuccess && mintedNftId > 0 && <a className="text-gray-400 underline" href={openSeaBaseUrl + mintContractAddress + "/" + mintedNftId} target="_blank">View your Membership Card NFT on OpenSea ⧉</a>}
-            {isClient && isConnected && !isAllowlisted && <p className="mt-4 text-base text-slate-200">You need to be allowlisted to be able to mint. Ask in Discord for assistance.</p>}
+            {isClient && isConnected && !isAllowlisted && <p className="mt-4 text-base text-red-600">You need to be allowlisted to be able to mint. Ask in Discord for assistance.</p>}
             
 
             <NotificationPopup success={true} isActive={mintSuccessNotifyIsOpen} setActive={setMintSuccessNotifyIsOpen} title="Minting Successful" description="You have successfully minted your PretzelDAO Membership Card!" />

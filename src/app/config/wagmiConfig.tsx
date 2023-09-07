@@ -2,6 +2,7 @@
 
 import { WagmiConfig, createConfig, configureChains } from 'wagmi'
 import { Chain, mainnet, sepolia, polygonMumbai, polygon } from 'wagmi/chains'
+import { infuraProvider } from 'wagmi/providers/infura';
 import { publicProvider } from 'wagmi/providers/public';
 import { connectorsForWallets, getDefaultWallets } from '@rainbow-me/rainbowkit';
 import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
@@ -23,6 +24,9 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
     chain,
 
     [
+        infuraProvider({
+            apiKey: process.env.NEXT_PUBLIC_INFURA_KEY != undefined ? process.env.NEXT_PUBLIC_INFURA_KEY : "NO KEY",
+        }),
         publicProvider(),
     ],
 )
