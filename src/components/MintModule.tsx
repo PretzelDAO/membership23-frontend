@@ -268,7 +268,7 @@ export default function MintModule() {
             </a>
             </div>
             {isClient && isConnected && !enoughAllowance && isBalanceOk && <p className="mt-4 text-base text-slate-200">You need to set an allowance of 20 USDC (type in "20" or hit "use default" in the MetaMask modal) for minting contract of the Membership Card NFT using the button above.</p>}
-            {isClient && isConnected && isBalanceOk && enoughAllowance && <><p className="mt-4 text-base text-green-400">You successfully added the required allowance!</p><p className="mt-4 text-base text-slate-200">When you click “mint”, 50 USDC will be transferred to the DAO treasury and you receive your PretzelDAO Membership Card NFT.</p></>}
+            {isClient && isConnected && isBalanceOk && enoughAllowance && <><p className="mt-4 text-base text-green-400">You successfully added the required allowance!</p><p className="mt-4 text-base text-slate-200">When you click “mint”, 20 USDC will be transferred to the DAO treasury and you receive your PretzelDAO Membership Card NFT.</p></>}
             {isClient && isConnected && !isBalanceOk && !mintSuccess && <p className="mt-4 text-base text-slate-200">You already own a PretzelDAO e.V. Membership Card NFT, only 1 NFT per member is possible.</p>}
             {isClient && isConnected && !isBalanceOk && mintSuccess && <><p className="mt-4 text-base text-green-400">Success! Congrats on minting your PretzelDAO e.V. Membership Card NFT!</p></>}
             {isClient && isConnected && !isBalanceOk && mintSuccess && mintedNftId > 0 && <a className="text-gray-400 underline" href={openSeaBaseUrl + mintContractAddress + "/" + mintedNftId} target="_blank">View your Membership Card NFT on OpenSea ⧉</a>}
