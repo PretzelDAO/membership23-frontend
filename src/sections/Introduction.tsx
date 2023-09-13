@@ -106,10 +106,10 @@ export function Introduction() {
               </li>
               <li className="py-3">
                 <p className="font-medium text-lg	 text-slate-950">
-                  Is the minting contract audited?
+                  Is the minting contract reviewed?
                 </p>
                 <p className="text-slate-500 text-base">
-                  Our minting contract was audited by <a href="https://neodyme.io/" className="underline">Neodyme AG</a>.
+                  Our minting contract was reviewed by <a href="https://neodyme.io/" className="underline">Neodyme AG</a>.
                 </p>
               </li>
             </ol>
